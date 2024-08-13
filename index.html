@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="header">
+        <nav>
+            <img src="images/logo4.png" class="logo">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contactme">Contact Me</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="container header-container">
+        <div class="header-text">
+            <h1>Hi! I am Aizel Joy <br>Lopez</h1>
+            <h2>Aspiring <span class="typing">Web Developer</span></h2>
+            <div class="action-btns">
+                <button class="hire-me">Hire Me</button>
+                <button class="dl-cv">Download CV</button>
+            </div>
+        </div>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/tambebesss?mibextid=ZbWKwL">
+                <img src="images/facebook-circle-logo-24.png" alt="">
+            </a>
+            <img src="images/github-logo-24.png" alt="">
+            <img src="images/instagram-alt-logo-24.png" alt="">
+            <img src="images/telegram-logo-24.png" alt="">
+        </div>
+        <div class="image-shape">
+            <img src="images/me3.png" alt="Aizel Joy Lopez">
+        </div>
+    </div>
+    <div id="about">
+        <div class="container about-container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/1.jpg" alt="1">
+                    <img src="images/2.jpg" alt="2">
+                    <img src="images/3.jpeg" alt="3">
+                    <img src="images/5.jpg" alt="5">
+                    <img src="images/7.jpg" alt="5">
+                    <img src="images/6.jpg" alt="5">
+                </div>
+                <div class="about-col-2">
+                    <h1>About Me</h1>
+                    <p>Your biography goes here. You can include information about your background, education, experience, and interests.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="projects"></div>
+
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const text = document.querySelector('.typing');
+            const textContent = text.textContent;
+            text.textContent = '';
+            let i = 0;
+            const typingSpeed = 50;
+            backSpeed = 50;
+
+            function type() {
+                if (i < textContent.length) {
+                    text.textContent += textContent.charAt(i);
+                    i++;
+                    setTimeout(type, typingSpeed);
+                }
+            }
+
+            type();
+        });
+    </script>
+</body>
+</html>
